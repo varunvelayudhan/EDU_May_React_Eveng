@@ -12,7 +12,9 @@ pipeline {
         }
         stage('Test') {
             agent none
-                    
+                 steps {
+                        sh './jenkins/scripts/test.sh'
+                    }
                 }
                 stage('Deliver') {
                     agent none
